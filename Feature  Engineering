@@ -1,0 +1,158 @@
+1. A parameter is a variable in a machine learning model that is learned from the data during 
+training. It helps the model make predictions. Examples include weights in linear 
+regression and biases in neural networks. Parameters are adjusted using optimization 
+techniques like gradient descent to minimize loss and improve accuracy. They are 
+different from hyperparameters, which are manually set before training. The correct 
+tuning of parameters helps the model generalize well to unseen data. A well-trained 
+model finds the best parameters to make accurate predictions on test data.
+
+
+2. Correlation is a statistical measure that describes the relationship between two variables. 
+It indicates how one variable changes with respect to another. The correlation coefficient 
+ranges from -1 to 1. A value of 1 represents a strong positive correlation, meaning both 
+variables increase together. A value of -1 means a strong negative correlation, where one 
+variable increases while the other decreases. A correlation of 0 means no relationship. 
+Correlation is useful in feature selection, helping to identify which variables are strongly 
+related and contribute significantly to machine learning models.
+
+
+3. Negative correlation occurs when one variable increases while the other decreases. This 
+means the two variables move in opposite directions. The correlation coefficient for 
+negative correlation lies between -1 and 0. A value close to -1 means a strong negative 
+relationship. For example, as exercise time increases, body weight decreases, showing a 
+negative correlation. It is important in feature selection to avoid redundant features. If 
+two features are highly negatively correlated, one can be removed to reduce model 
+complexity without losing valuable information.
+
+
+4. Machine learning (ML) is a subset of artificial intelligence that allows computers to learn 
+from data and make predictions without explicit programming. The main components of 
+ML are:
+o Dataset: Collection of input data.
+o Features: Variables used for prediction.
+o Model: Algorithm that learns from data.
+o Training: Model learns patterns from data.
+o Evaluation: Measuring model performance using metrics.
+o Optimization: Fine-tuning model parameters to improve accuracy.
+ML is widely used in recommendation systems, fraud detection, and self-driving 
+cars.
+
+
+5. Loss value measures how far the model's predictions are from actual values. A low loss 
+means better accuracy, while a high loss indicates poor performance. Loss functions vary 
+based on the task. For regression models, Mean Squared Error (MSE) is used, while 
+classification models use Cross-Entropy Loss. The loss function is minimized using 
+optimization algorithms like Gradient Descent. A decreasing loss during training 
+indicates model improvement. If the loss remains high, the model may be underfitting or 
+require more data preprocessing.
+
+
+6. Continuous variables are numeric and can take any value within a range, such as 
+temperature, age, or salary. Categorical variables represent discrete groups, like gender 
+(Male/Female) or colors (Red/Blue). In machine learning, continuous variables are used 
+for numerical calculations, while categorical variables require encoding before being 
+used in a model. Proper handling of categorical variables is essential for improving model 
+accuracy.
+
+
+7. Handling categorical variables requires converting them into numerical values. Common 
+methods include:
+o One-Hot Encoding: Creates binary columns for each category.
+o Label Encoding: Assigns numerical labels to categories.
+o Ordinal Encoding: Used for ranked categories (Low, Medium, High).
+o Frequency Encoding: Replaces categories with occurrence counts.
+Choosing the right encoding method ensures the model understands categorical 
+data correctly.
+
+
+8. Training and testing a dataset refers to splitting data into two parts:
+o Training Set: Used to train the model by learning patterns.
+o Testing Set: Used to evaluate the model’s performance on unseen data.
+A common split is 80% training, 20% testing. This prevents overfitting and 
+ensures the model generalizes well.
+
+
+9. sklearn.preprocessing is a module in scikit-learn that provides functions for feature 
+scaling, encoding categorical variables, and normalizing data. It includes:
+o StandardScaler: Standardizes features.
+o MinMaxScaler: Scales values between a range.
+o OneHotEncoder: Converts categories into binary format.
+Preprocessing is essential to prepare data for machine learning.
+
+
+10. A Test set is a portion of the dataset used to evaluate a trained model. It helps assess how 
+well the model generalizes to new data and prevents overfitting.
+
+
+11. Splitting data is done using train_test_split in scikit-learn:
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, 
+test_size=0.2, random_state=42)
+This ensures 80% training data and 20% testing data.
+
+
+12. Approaching a Machine Learning problem involves:
+ Understanding the problem and dataset.
+ Performing Exploratory Data Analysis (EDA).
+ Preprocessing data (handling missing values, encoding categorical features).
+ Splitting data into training and testing sets.
+ Selecting an appropriate model.
+ Training, tuning, and evaluating the model.
+
+
+13. EDA (Exploratory Data Analysis) helps understand the dataset structure, detect missing 
+values, outliers, and relationships between features. It ensures better model performance.
+
+
+14. Correlation vs. Causation: Correlation measures relationships between variables, but does 
+not imply one causes the other. Causation means one event directly affects another.
+
+
+15. Finding correlation in Python:
+import pandas as pd
+df.corr()
+
+
+16. An optimizer is an algorithm that adjusts model parameters to minimize loss. Types:
+ Gradient Descent
+ Adam
+ RMSprop
+
+
+17. sklearn.linear_model contains regression models like Linear Regression, Logistic 
+Regression, and Ridge Regression.
+
+
+18. model.fit() trains the model using input data. It requires:
+model.fit(X_train, y_train)
+
+
+19. model.predict() makes predictions on new data. It requires:
+y_pred = model.predict(X_test)
+
+
+20. Feature scaling ensures that numerical features have a similar range, improving model 
+performance. Without scaling, larger values may dominate smaller ones.
+
+
+21. Scaling in Python is done using:
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+
+22. Data encoding converts categorical values into numerical values using One-Hot 
+Encoding, Label Encoding, etc.
+
+
+23. Feature Engineering involves creating new features from raw data to improve model 
+performance.
+
+
+24. Causation vs Correlation Example:
+ Correlation: Ice cream sales and drowning rates increase together.
+ Causation: Hot weather causes both to rise.
+
+
+25. Importance of EDA: Helps in detecting outliers, handling missing values, and selecting 
+important features before model training.
